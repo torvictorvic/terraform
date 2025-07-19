@@ -1,0 +1,34 @@
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+
+# Terraform variable overrides
+*.tfvars
+*.tfvars.json
+
+# Local CLI configuration
+.terraformrc
+.terraform/
+
+# Sensitive or secret files
+secret.tf
+*.pem
+*.key
+
+# Plan output
+*.plan
+
+# IDE/editor specific
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# Backend-specific overrides (si usas Terraform Cloud o S3, etc.)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

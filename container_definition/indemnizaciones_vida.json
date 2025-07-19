@@ -1,0 +1,91 @@
+[
+  {
+    "name": "xxx-service",
+    "image": "${image_url}",
+    "networkMode": "awsvpc",
+    "environment": [
+      {
+        "name": "DNS_LB",
+        "value": "${dns_lb}"
+      },
+      {
+        "name": "DB_ENDPOINT",
+        "value": "${db_endpoint}"
+      },
+      {
+        "name": "DB_DATABASENAME",
+        "value": "${db_database_name}"
+      } 
+    ],
+    "secrets": [
+      {
+        "name": "DB_PG_USERNAME",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/xxx-${stack_id}/db_username"
+      },
+      {
+        "name": "DB_PG_PASSWORD",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/xxx-${stack_id}/db_password"
+      },
+      {
+        "name": "OPENL_PATH",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/openl_path"
+      },
+      {
+        "name": "OPENL_APIKEY",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/openl_apikey"
+      },
+      {
+        "name": "NOTIFICATION_PATH",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/notification_path"
+      },
+      {
+        "name": "NOTIFICATION_APIKEY",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/notification_apikey"
+      },
+      {
+        "name": "BUCKET_S3",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/bucket_s3"
+      },
+      {
+        "name": "S3_ACCESS_KEY",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/s3/access_key"
+      },
+      {
+        "name": "S3_SECRET_KEY",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/s3/secret_key"
+      },
+      {
+        "name": "EMAIL",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/email"
+      },
+      {
+        "name": "EMAIL_DOC",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/email_doc"
+      },
+      {
+        "name": "EMAIL_TIPO_DOC",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/email_tipo_doc"
+      },
+      {
+        "name": "EMAIL_ORIGEN",
+        "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/email_origen"
+      }
+    ],
+    "portMappings": [
+      {
+        "hostPort": 80,
+        "containerPort": 80
+      }
+    ],
+    "memory": 512,
+    "cpu": 256,
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/logs/ecs/xxx-service/tsk-log",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "ecs"
+      }
+    }
+  }
+]

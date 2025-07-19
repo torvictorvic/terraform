@@ -1,0 +1,175 @@
+[
+    {
+        "name": "xxx-xxx-xx",
+        "image": "${image_url}",
+        "networkMode": "awsvpc",
+        "secrets" : [
+            {
+                "name": "DOCS_URL",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/docs_url"
+            },
+            {
+                "name": "REDOC_URL",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/redoc_url"
+            },
+            {
+                "name": "KEY_CORREO",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/key_correo"
+            },
+            {
+                "name": "URL_CORREO",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_correo"
+            },
+            {
+                "name": "HEADERS_CORREO",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/headers_correo"
+            },
+            {
+                "name": "KEY_OTP",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/key_otp"
+            },
+            {
+                "name": "URL_OTP",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_otp"
+            },
+            {
+                "name": "HEADERS_OTP",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/headers_otp"
+            },
+            {
+                "name": "KEY_VALIDATION_OTP",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/key_validation_otp"
+            },
+            {
+                "name": "URL_VALIDATION_OTP",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_validation_otp"
+            },
+            {
+                "name": "KEY_XXX_XXX",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/KEY_XXX_XXX"
+            },
+            {
+                "name": "URL_XXX_XXX",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/URL_XXX_XXX"
+            },
+            {
+                "name": "HEADERS_XXX_XXX",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/HEADERS_XXX_XXX"
+            },
+            {
+                "name": "KEY_AZURE",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/key_azure"
+            },
+            {
+                "name": "URL_AZURE",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_azure"
+            },
+            {
+                "name": "HEADERS_AZURE",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/headers_azure"
+            },
+            {
+                "name": "USER-DB",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/user-app"
+            },
+            {
+                "name": "PASSWORD-DB",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/password-app"
+            },
+            {
+                "name": "DATABASE_NAME",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/database_name"
+            },
+            {
+                "name": "ENDPOINT",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/endpoint_popeye"
+            },
+            {
+                "name": "PORT-DB",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/port-db"
+            },
+            {
+                "name": "SCHEMA",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-automaticas/bd/${profile}/schema"
+            },
+            {
+                "name": "ENV",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/env"
+            },
+            {
+                "name": "SERVICE_ACCOUNT",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/service_account"
+            },
+            {
+                "name": "PROJECT_ID",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/project_id"
+            },
+            {
+                "name": "PRIVATE_KEY_ID",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/private_key_id"
+            },
+            {
+                "name": "PRIVATE_KEY",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/private_key"
+            },
+            {
+                "name": "CLIENT_ID",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/client_id"
+            },
+            {
+                "name": "CLIENT_EMAIL",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/client_email"
+            },
+            {
+                "name": "AUTH_URI",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/auth_uri"
+            },
+            {
+                "name": "TOKEN_URI",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/token_uri"
+            },
+            {
+                "name": "AUTH_XXX_X509_CERT_URL",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/auth_xxx_x509_cert_url"
+            },
+            {
+                "name": "CLIENT_XXX_CERT_URL",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/client_xxx_cert_url"
+            },
+            {
+                "name": "XXX_DOMAIN",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/xxx_domain"
+            },
+            {
+                "name": "URL_SHEETS",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_sheets"
+            },
+            {
+                "name": "URL_SHEETS_CNE",
+                "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/mod-xxx/ms/${profile}/url_sheets_cne"
+            }
+        ],
+        "environment": [
+            {
+                "name": "DNS_LB",
+                "value": "${dns_lb}"
+            }
+        ],
+        "portMappings": [
+            {
+                "hostPort": 80,
+                "containerPort": 80
+            }
+        ],
+        "memory": 1024,
+        "cpu": 512,
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "/logs/ecs/xxx-xxx-xx/tsk-log",
+                "awslogs-region": "${region}",
+                "awslogs-stream-prefix": "ecs"
+            }
+        }
+    }
+]

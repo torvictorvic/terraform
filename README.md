@@ -1,2 +1,1 @@
-# terraform
-Terraform templates
+# xxx-infra.

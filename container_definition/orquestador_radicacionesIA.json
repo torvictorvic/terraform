@@ -1,0 +1,120 @@
+[
+    {
+      "name": "xxx-xxx",
+      "image": "${image_url}",
+      "networkMode": "awsvpc",
+      "environment": [
+        {
+          "name": "DNS_LB",
+          "value": "${dns_lb}"
+        },
+        {
+          "name": "DB_ENDPOINT",
+          "value": "${db_endpoint}"
+        },
+        {
+          "name": "DB_DATABASENAME",
+          "value": "${db_database_name}"
+        } 
+      ],
+      "secrets": [
+        {
+          "name": "AAA_TTT",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/aaa_ttt"
+        },
+        {
+          "name": "S3_ACCESS_KEY",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/s3/access_key"
+        },
+        {
+          "name": "S3_SECRET_KEY",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/s3/secret_key"
+        },
+        {
+          "name": "URL_API_XXXX",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/URL_API_XXXX"
+        },
+        {
+          "name": "DB_USERNAME",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/radicador-${stack_id}/db_username"
+        },
+        {
+          "name": "DB_PASSWORD",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/xxx/${stack_id}/radicador-${stack_id}/db_password"
+        },
+        {
+          "name": "URL_API_COVERAGE",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/url_api_coverage"
+        },
+        {
+          "name": "API_KEY_COVERAGE",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/coverage_apikey"
+        },
+        {
+          "name": "URL_API_OCR",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/url_api_ocr"
+        },
+        {
+          "name": "API_KEY_OCR",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/ocr_apikey"
+        },
+        {
+          "name": "URL_API_SUMMARY",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/url_api_summary"
+        },
+        {
+          "name": "API_KEY_SUMMARY",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/summary_apikey"
+        },
+        {
+          "name": "OCR_PROJECT_ID",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/ocr_project_id"
+        },
+        {
+          "name": "OCR_PROCESSOR_ID",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/ocr_processor_id"
+        },
+        {
+          "name": "AUTH_URL_COGNITO",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/auth_url_cognito"
+        },
+        {
+          "name": "COGNITO_CLIENT_ID",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/cognito_client_id"
+        },
+        {
+          "name": "COGNITO_CLIENT_SECRET",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/cognito_client_secret"
+        },
+        {
+          "name": "ADMIN_PROMPT",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/admin_prompt"
+        },
+        {
+          "name": "RULES_OPENL_PATH",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/rules_openl_path"
+        },
+        {
+          "name": "RULES_OPENL_APIKEY",
+          "valueFrom": "arn:aws:ssm:${region}:${account_id}:parameter/yyyy/ms/${stack_id}/rules_openl_apikey"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "memory": 512,
+      "cpu": 256,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/logs/ecs/xxx-xxx/tsk-log",
+          "awslogs-region": "${region}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+  

@@ -1,0 +1,29 @@
+[
+    {
+      "name": "mod-aaaa-bbbbb-ccccc",
+      "image": "${image_url}",
+      "networkMode": "awsvpc",
+      "environment": [
+        {
+          "name": "DNS_LB",
+          "value": "${dns_lb}"
+        }
+      ],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "memory": 512,
+      "cpu": 256,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/logs/ecs/mod-aaaa-bbbbb-ccccc/tsk-log",
+          "awslogs-region": "${region}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
